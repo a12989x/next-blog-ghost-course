@@ -1,0 +1,186 @@
+.post {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__back {
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+        color: #2b2b2b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            margin-right: 0.5rem;
+        }
+    }
+
+    &__title {
+        margin-top: 0;
+        font-size: 3.4375rem;
+    }
+
+    &__container {
+        padding: 4rem 3rem 3rem;
+        width: 100%;
+        max-width: 1000px;
+
+        @include media('<=400px') {
+            padding: 2rem;
+        }
+
+        @include media('<=250px') {
+            padding: 1rem;
+        }
+
+        .post__loadComments {
+            padding: 1rem 1.5rem;
+            margin-top: 1.5rem;
+            color: #2b2b2b;
+            background-color: transparent;
+            border: 1px solid #2b2b2b;
+            transition: 0.3s;
+            cursor: pointer;
+
+            &:hover {
+                color: #881ffe;
+                border-color: #881ffe;
+            }
+        }
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p ul,
+        ol,
+        li {
+            margin-top: 0;
+        }
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 2rem;
+        }
+
+        ol,
+        ul {
+            padding: 0 1rem;
+            display: grid;
+            grid-auto-flow: row;
+            row-gap: 1rem;
+        }
+
+        ul {
+            list-style-type: disc;
+            row-gap: 0.2rem;
+        }
+
+        a {
+            color: #2b2b2b;
+            border-bottom: 2px solid #881ffe;
+        }
+
+        p,
+        ul,
+        ol {
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            line-height: 1.4rem;
+        }
+
+        blockquote {
+            margin: 1.5rem 0;
+            padding: 0 1.5rem;
+            border-left: 3px solid #881ffe;
+        }
+
+        pre {
+            padding: 1rem;
+            color: #f3f3f3;
+            background-color: #2b2b2b;
+            border-radius: 0.5rem;
+        }
+
+        figure {
+            margin: 0;
+            width: 100%;
+        }
+
+        .kg-bookmark-container {
+            display: flex;
+            border: 1px solid #2b2b2b;
+            border-radius: 0.5rem;
+            width: 100%;
+
+            &:hover {
+                border-color: #881ffe;
+
+                .kg-bookmark-title {
+                    color: #881ffe;
+                }
+            }
+        }
+
+        .kg-bookmark-content {
+            padding: 1rem;
+        }
+
+        .kg-bookmark-title {
+            font-weight: bold;
+            transition: 0.3s;
+            margin-bottom: 0.8rem;
+        }
+
+        .kg-bookmark-description {
+            margin-bottom: 0.6rem;
+            max-height: 48px;
+            overflow: hidden;
+            display: -webkit-box;
+            line-height: 1.5rem;
+        }
+
+        .kg-bookmark-metadata {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            img {
+                margin-right: 0.5rem;
+                height: 22px;
+                width: 22px;
+            }
+        }
+
+        .kg-bookmark-thumbnail {
+            min-width: 33%;
+            max-height: 100%;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .kg-gallery-row {
+            display: grid;
+            grid-auto-flow: column;
+            height: 10rem;
+            column-gap: 0.5rem;
+        }
+
+        .kg-gallery-image {
+            img {
+                height: 100%;
+            }
+        }
+    }
+}
