@@ -1,5 +1,6 @@
 /* abstracts */
 @import './abstracts/variables';
+@import './abstracts/breakpoints';
 
 /* vendors */
 @import './vendors/normalize';
@@ -11,3 +12,5 @@
 /* layout */
 /* components */
 /* pages */
+@import './pages/home';
+@import './pages/post';
